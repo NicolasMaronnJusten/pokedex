@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+
+</head>
+<nav class="navbar">
+    <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Pokebola">
+        <span>PokéDev</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Início</a></li>
+        <li><a href="#pokedex">Pokédex</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+    </ul>
+</nav>
+    <main class="main-container">
+    
+    <h1 class="page-title">
+        VENHA CONHECER SOBRE O <br> INCRÍVEL MUNDO DOS POKÉMONS
+    </h1>
+
+    <div class="search-wrapper-right">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pesquise o nome ou numeração">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <section class="regions-section">
+        <p class="section-label">Explore pelas Regiões:</p>
+        
+        <div class="regions-grid">
+            <div class="region-card kanto" onclick="alert('Ir para Kanto')">
+                <div class="card-overlay">
+                    <span class="region-name">Kanto</span>
+                    <span class="region-desc">Geração 1</span>
+                </div>
+            </div>
+
+            <div class="region-card johto" onclick="alert('Ir para Johto')">
+                <div class="card-overlay">
+                    <span class="region-name">Johto</span>
+                    <span class="region-desc">Geração 2</span>
+                </div>
+            </div>
+
+            <div class="region-card hoenn" onclick="alert('Ir para Hoenn')">
+                <div class="card-overlay">
+                    <span class="region-name">Hoenn</span>
+                    <span class="region-desc">Geração 3</span>
+                </div>
+            </div>
+
+            <div class="region-card sinnoh" onclick="alert('Ir para Sinnoh')">
+                <div class="card-overlay">
+                    <span class="region-name">Sinnoh</span>
+                    <span class="region-desc">Geração 4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+
+    <body>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+body {
+    background-color: #f3f4f6; /* Fundo cinza clarinho */
+    color: #1f2937;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* --- NAVBAR (Fixa e Centralizada) --- */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Divide em 3: Logo - Menu - Vazio */
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1f2937;
+    border-bottom: 1px solid #374151;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #facc15;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo img { width: 30px; height: 30px; }
+
+.nav-links {
+    justify-self: center;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #facc15;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* TÍTULO DA PÁGINA */
+.page-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111827;
+}
+
+/* --- BUSCA (Alinhada à Direita) --- */
+.search-wrapper-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-bar {
+    background-color: #9ca3af; /* Cinza médio */
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 350px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar input::placeholder { color: #333; }
+.search-icon { font-size: 1.2rem; cursor: pointer; margin-left: 10px; }
+
+/* --- SEÇÃO DE REGIÕES (Os Quadrados) --- */
+.regions-section {
+    margin-bottom: 50px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+.section-label {
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.regions-grid {
+    display: grid;
+    /* 2 Colunas grandes em vez de 4 pequenas */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.region-card {
+    height: 250px; /* Bem mais alto */
+    border-radius: 20px;
+    position: relative; /* Para posicionar o texto em cima */
+    overflow: hidden; /* Garante que a imagem não vaze nas bordas */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    
+    /* Configuração da Imagem de Fundo */
+    background-size: cover;
+    background-position: center;
+}
+
+.region-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.kanto {
+    background-image: url("imagensregioes/artekanto.jpg");
+}
+
+.johto {
+    background-image: url('https://archives.bulbagarden.net/media/upload/6/64/JohtoMap.png');
+}
+
+.hoenn {
+    background-image: url('https://archives.bulbagarden.net/media/upload/8/85/Hoenn_ORAS.png');
+}
+
+.sinnoh {
+    background-image: url('https://archives.bulbagarden.net/media/upload/0/08/Sinnoh_BDSP_artwork.png');
+}
+
+.region-name {
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.region-desc {
+    color: #facc15;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* --- GRADE DE POKEMONS --- */
+.pokedex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.card {
+    background-color: #9ca3af; /* Cinza do card */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #cbd5e1;
+}
+
+.card-image {
+    width: 130px;
+    height: 130px;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+}
+
+.card-title {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Sombra preta só embaixo */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Texto no rodapé do card */
+    padding: 20px;
+    box-sizing: border-box;
+}
