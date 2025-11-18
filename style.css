@@ -6,10 +6,10 @@ body {
     margin: 0;
 }
 
-/* --- NAVBAR (Fixa e Centralizada) --- */
+/* --- NAVBAR --- */
 .navbar {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Divide em 3: Logo - Menu - Vazio */
+    grid-template-columns: 1fr auto 1fr; 
     align-items: center;
     padding: 15px 40px;
     background-color: #1f2937;
@@ -54,7 +54,7 @@ body {
     color: #facc15;
 }
 
-/* --- CONTAINER PRINCIPAL --- */
+
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -72,7 +72,7 @@ body {
     color: #111827;
 }
 
-/* --- BUSCA (Alinhada à Direita) --- */
+/* --- BUSCA  --- */
 .search-wrapper-right {
     display: flex;
     justify-content: flex-end;
@@ -103,7 +103,7 @@ body {
 .search-bar input::placeholder { color: #333; }
 .search-icon { font-size: 1.2rem; cursor: pointer; margin-left: 10px; }
 
-/* --- SEÇÃO DE REGIÕES (Os Quadrados) --- */
+/* --- SEÇÃO DE REGIÕES --- */
 .regions-section {
     margin-bottom: 50px;
     border-top: 1px solid #e5e7eb;
@@ -120,7 +120,7 @@ body {
 
 .regions-grid {
     display: grid;
-    /* 2 Colunas grandes em vez de 4 pequenas */
+   
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
     gap: 30px;
     margin-top: 20px;
@@ -218,12 +218,12 @@ body {
 }
 
 .card-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Sombra preta só embaixo */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); 
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Texto no rodapé do card */
+    justify-content: flex-end; 
     padding: 20px;
     box-sizing: border-box;
 }

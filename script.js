@@ -1,7 +1,7 @@
 // --- PARTE 1: SELETORES ---
 const pokedexList = document.getElementById('pokedex-list');
 const searchInput = document.getElementById('search-input');
-const navLinks = document.querySelectorAll('.nav-links a'); // Pegando os links da navbar
+const navLinks = document.querySelectorAll('.nav-links a'); 
 
 let allPokemons = []; // Guarda os dados para a busca
 
@@ -31,21 +31,10 @@ const fetchPokemon = async () => {
     displayPokemon(allPokemons);
 };
 
-// --- PARTE 4: MOSTRAR NA TELA (HTML dos Cards Cinzas) ---
-const displayPokemon = (pokemonList) => {
-    const htmlString = pokemonList.map((pokemon) => `
-        <li class="card">
-            <div class="card-content">
-                <img class="card-image" src="${pokemon.image}" alt="${pokemon.name}"/>
-                <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
-            </div>
-        </li>
-    `).join('');
-    
-    pokedexList.innerHTML = htmlString;
-};
 
-// --- PARTE 5: LÓGICA DA PESQUISA ---
+
+
+
 if(searchInput) {
     searchInput.addEventListener('keyup', (e) => {
         const searchString = e.target.value.toLowerCase();
