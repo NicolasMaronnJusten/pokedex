@@ -117,4 +117,7 @@ const loadHero = async (pokemonId, descricaoTexto) => {
 };
 
 // pokemon definido e descrição personalizada
-loadHero(448, "Dizem que nenhum inimigo pode permanecer invisível para Lucário, pois ele pode detectar auras — mesmo aquelas de inimigos que ele não conseguiria ver de outra forma..");
+loadHero(249, "As asas de Lugia têm um poder devastador—um leve bater de asas pode destruir casas comuns. Como resultado, este Pokémon escolhe viver fora da vista, nas profundezas do mar.");
+
+
+
