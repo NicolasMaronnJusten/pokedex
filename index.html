@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Pokedex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechDex</title>
 
-    
+
     <link rel="stylesheet" href="style.css">
 
-    
+
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/188/188987.png">
 
     <!-- Fontes do Google -->
@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    
-    <script src="script.js" defer></script> 
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -27,31 +27,50 @@
     <nav class="navbar">
         <div class="logo">
             <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Pokebola">
-            <span>Pokedex</span> 
+            <span>TechDex</span>
         </div>
 
         <ul class="nav-links">
-            
-            <li><a href="home" class="active">Início</a></li>
-            <li><a href="pokedex">Pokédex</a></li>
-            <li><a href="sobre">Sobre</a></li>
+            <li><a href="#" class="active">Início</a></li>
+            <li><a href="#">Pokédex</a></li>
+            <li><a href="#">Sobre</a></li>
         </ul>
+
+        <div class="search-bar nav-search">
+            <input type="text" id="search-input" placeholder="Pesquise o nome ou numeração">
+            <span class="search-icon">🔍</span>
+        </div>
     </nav>
 
     <main class="main-container">
+        <section class="hero-banner" id="hero-banner">
+            <div class="hero-content">
+                
+
+                <h1 id="hero-name">Carregando...</h1>
+
+                <div class="hero-types" id="hero-types"></div>
+
+                <p id="hero-desc">Buscando dados na Pokédex...</p>
+
+                <button class="hero-btn" onclick="alert('Em breve!')">
+                    Mais Detalhes ✨
+                </button>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="" alt="Pokemon Destaque" id="hero-img" class="floating-pokemon">
+                <div class="glow-effect"></div>
+            </div>
+        </section>
+
+
 
         <!-- Título principal da página -->
         <h1 class="page-title">
             VENHA CONHECER SOBRE O <br> INCRÍVEL MUNDO DOS POKÉMONS
         </h1>
 
-        <!-- Barra de pesquisa alinhada à direita -->
-        <div class="search-wrapper-right">
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Pesquise o nome ou numeração"> <!-- Input da pesquisa -->
-                <span class="search-icon">🔍</span> 
-            </div>
-        </div>
 
         <!-- Seção das regiões -->
         <section class="regions-section">
@@ -95,20 +114,20 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <span>Pokedex</span> 
+                <span>Pokedex</span>
             </div>
 
-            <p>Desenvolvido por <strong>Nicolas</strong></p> 
+            <p>Desenvolvido por <strong>Nicolas</strong></p>
 
             <div class="social-links">
-                
+
                 <a href="https://github.com/NicolasMaronnJusten" target="_blank">GitHub</a>
                 <a href="#">LinkedIn</a>
             </div>
         </div>
 
         <!-- Direitos autorais -->
-        <p class="copyright">&copy; 2024 Pokedex. Todos os direitos reservados.</p>
+        <p class="copyright">&copy; 2025 TechDex. Todos os direitos reservados.</p>
     </footer>
 
 </body>
