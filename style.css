@@ -295,7 +295,7 @@ body {
 
 /* --- HERO BANNER (O Destaque) --- */
 .hero-banner {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%); /* Fundo escuro elegante */
+    background: linear-gradient(135deg, #8d8d8d 0%, #f80101b4 100%); /* Fundo escuro elegante */
     border-radius: 30px;
     padding: 40px 60px;
     display: flex;
@@ -310,8 +310,9 @@ body {
 
 /* --- LADO ESQUERDO: TEXTOS --- */
 .hero-content {
-    max-width: 500px;
+    max-width: 600px;
     z-index: 2; /* Fica na frente do brilho */
+    align-self: center;
 }
 
 .highlight-badge {
@@ -349,15 +350,16 @@ body {
 
 
 .hero-content p {
-    color: #9ca3af; /* Cinza claro */
+    color: #ffffff; /* Cinza claro */
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 30px;
     font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-btn {
-    background-color: #facc15;
+    background-color: #e6e6e6;
     color: #1f2937;
     border: none;
     padding: 15px 35px;
