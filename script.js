@@ -1,44 +1,40 @@
-// --- PARTE 1: SELETORES ---
+// SELETORES 
+// Pega a UL onde os pokémons vão ser renderizados
 const pokedexList = document.getElementById('pokedex-list');
+
+// Input da barra de pesquisa
 const searchInput = document.getElementById('search-input');
+
+// Links da navbar (pra adicionar/remover o "active")
 const navLinks = document.querySelectorAll('.nav-links a'); 
 
-let allPokemons = []; // Guarda os dados para a busca
+// Array onde guardamos todos os pokémons buscados na API
+let allPokemons = [];
 
-// --- PARTE 2: LÓGICA DA NAVBAR (Manteve o que fizemos antes) ---
+
+//  LÓGICA DA NAVBAR 
+// Ativa/desativa o link clicado usando a classe "active"
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
-        // Remove 'active' de todos
+        // Remove o active de todos os links
         navLinks.forEach(nav => nav.classList.remove('active'));
-        // Adiciona 'active' só no clicado
+
+        // Adiciona o active só no link clicado
         this.classList.add('active');
     });
 });
 
-// --- PARTE 3: BUSCAR POKEMONS NA API ---
-const fetchPokemon = async () => {
-    const url = `https://pokeapi.co/api/v2/pokemon?limit=151`;
-    const res = await fetch(url);
-    const data = await res.json();
-    
-    // Mapeando os dados e salvando na variável global
-    allPokemons = data.results.map((pokemon, index) => ({
-        ...pokemon,
-        id: index + 1,
-        image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 1}.png`
-    }));
-
-    displayPokemon(allPokemons);
-};
 
 
-
-
-
+//  FILTRO DE PESQUISA 
+// Só executa se o input existir na página
 if(searchInput) {
     searchInput.addEventListener('keyup', (e) => {
+        
+        // Texto digitado convertido pra minúsculo
         const searchString = e.target.value.toLowerCase();
         
+        // Filtra por nome OU número exato
         const filteredPokemons = allPokemons.filter((pokemon) => {
             return (
                 pokemon.name.toLowerCase().includes(searchString) ||
@@ -46,8 +42,8 @@ if(searchInput) {
             );
         });
 
+        // Atualiza a lista mostrando só os resultados filtrados
         displayPokemon(filteredPokemons);
     });
 }
 
-// fetchPokemon();

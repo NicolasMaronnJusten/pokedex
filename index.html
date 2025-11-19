@@ -2,28 +2,36 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Pokedex</title>
 
+    
     <link rel="stylesheet" href="style.css">
+
+    
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/188/188987.png">
+
+    <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <script src="script.js" defer></script>
+    
+    <script src="script.js" defer></script> 
 </head>
 
 <body>
 
+    <!-- Barra de navegação -->
     <nav class="navbar">
         <div class="logo">
             <img src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Pokebola">
-            <span>Pokedex</span>
+            <span>Pokedex</span> 
         </div>
 
         <ul class="nav-links">
+            
             <li><a href="home" class="active">Início</a></li>
             <li><a href="pokedex">Pokédex</a></li>
             <li><a href="sobre">Sobre</a></li>
@@ -32,21 +40,25 @@
 
     <main class="main-container">
 
+        <!-- Título principal da página -->
         <h1 class="page-title">
             VENHA CONHECER SOBRE O <br> INCRÍVEL MUNDO DOS POKÉMONS
         </h1>
 
+        <!-- Barra de pesquisa alinhada à direita -->
         <div class="search-wrapper-right">
             <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Pesquise o nome ou numeração">
-                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Pesquise o nome ou numeração"> <!-- Input da pesquisa -->
+                <span class="search-icon">🔍</span> 
             </div>
         </div>
 
+        <!-- Seção das regiões -->
         <section class="regions-section">
             <p class="section-label">Explore pelas Regiões:</p>
 
             <div class="regions-grid">
+                <!-- Cada card representa uma região -->
                 <div class="region-card kanto" onclick="alert('Ir para Kanto')">
                     <div class="card-overlay">
                         <span class="region-name">Kanto</span>
@@ -79,17 +91,23 @@
 
     </main>
 
+    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <span>PokéDev</span>
+                <span>Pokedex</span> 
             </div>
-            <p>Desenvolvido por <strong>Nicolas</strong></p>
+
+            <p>Desenvolvido por <strong>Nicolas</strong></p> 
+
             <div class="social-links">
+                
                 <a href="https://github.com/NicolasMaronnJusten" target="_blank">GitHub</a>
                 <a href="#">LinkedIn</a>
             </div>
         </div>
+
+        <!-- Direitos autorais -->
         <p class="copyright">&copy; 2024 Pokedex. Todos os direitos reservados.</p>
     </footer>
 

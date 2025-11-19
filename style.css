@@ -1,32 +1,32 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
 body {
-    background-color: #f3f4f6; /* Fundo cinza clarinho */
-    color: #1f2937;
+    background-color: #f3f4f6; 
+    color: #1f2937; 
     font-family: 'Poppins', sans-serif;
-    margin: 0;
+    margin: 0; 
 }
 
 /* --- NAVBAR --- */
 .navbar {
-    display: grid;
+    display: grid; /* Navbar dividida em 3 colunas */
     grid-template-columns: 1fr auto 1fr; 
-    align-items: center;
+    align-items: center; 
     padding: 15px 40px;
-    background-color: #1f2937;
-    border-bottom: 1px solid #374151;
-    position: sticky;
+    background-color: #1f2937; 
+    border-bottom: 1px solid #374151; /* Linha de separação */
+    position: sticky; /* Fixa no topo ao rolar */
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Garante que fica acima dos cards */
 }
 
 .logo {
-    justify-self: start;
+    justify-self: start; /* Coloca no canto esquerdo */
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #facc15;
+    color: #facc15; 
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -35,7 +35,7 @@ body {
 .logo img { width: 30px; height: 30px; }
 
 .nav-links {
-    justify-self: center;
+    justify-self: center; /* Centraliza os links */
     display: flex;
     gap: 40px;
     list-style: none;
@@ -45,18 +45,17 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #9ca3af;
+    color: #9ca3af; /* Cinza claro */
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Suaviza o hover */
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #facc15;
+    color: #facc15; /* Destaque amarelo */
 }
 
-
 .main-container {
-    max-width: 1200px;
+    max-width: 1200px; /* Limita largura central */
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -69,25 +68,25 @@ body {
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #111827;
+    color: #111827; /* Preto suave */
 }
 
 /* --- BUSCA  --- */
 .search-wrapper-right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Alinha barra à direita */
     margin-bottom: 20px;
     width: 100%;
 }
 
 .search-bar {
-    background-color: #9ca3af; /* Cinza médio */
+    background-color: #9ca3af; /* Fundo cinza da barra */
     display: flex;
     align-items: center;
     border-radius: 8px;
     padding: 10px 15px;
     width: 350px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra leve */
 }
 
 .search-bar input {
@@ -97,7 +96,6 @@ body {
     width: 100%;
     font-size: 1rem;
     color: #000;
-    font-family: 'Poppins', sans-serif;
 }
 
 .search-bar input::placeholder { color: #333; }
@@ -106,12 +104,12 @@ body {
 /* --- SEÇÃO DE REGIÕES --- */
 .regions-section {
     margin-bottom: 50px;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #e5e7eb; /* Linha separando do topo */
     padding-top: 20px;
 }
 
 .section-label {
-    color: #6b7280;
+    color: #6b7280; /* Cinza médio */
     font-weight: 600;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -120,31 +118,29 @@ body {
 
 .regions-grid {
     display: grid;
-   
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Cards se ajustam automaticamente */
     gap: 30px;
     margin-top: 20px;
 }
 
 .region-card {
-    height: 250px; /* Bem mais alto */
+    height: 250px; /* Altura grande pra destacar as regiões */
     border-radius: 20px;
-    position: relative; /* Para posicionar o texto em cima */
-    overflow: hidden; /* Garante que a imagem não vaze nas bordas */
+    position: relative; /* Permite overlay dentro */
+    overflow: hidden; /* Evita imagem vazando */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    
-    /* Configuração da Imagem de Fundo */
-    background-size: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Sombra forte */
+    background-size: cover; /* Imagem ocupa todo card */
     background-position: center;
 }
 
 .region-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transform: translateY(-5px) scale(1.02); /* Efeito de levantar */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Sombra mais intensa */
 }
 
+/* Imagens das regiões */
 .kanto {
     background-image: url("imagensregioes/artekanto.jpg");
 }
@@ -161,11 +157,12 @@ body {
     background-image: url('https://archives.bulbagarden.net/media/upload/0/08/Sinnoh_BDSP_artwork.png');
 }
 
+/* Texto dentro dos cards */
 .region-name {
     font-size: 2rem;
     color: white;
     font-weight: 800;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra pra destacar */
 }
 
 .region-desc {
@@ -175,17 +172,17 @@ body {
     text-transform: uppercase;
 }
 
-/* --- GRADE DE POKEMONS --- */
+/*  GRADE DE POKEMONS  */
 .pokedex-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cards adaptativos */
     gap: 20px;
     list-style: none;
     padding: 0;
 }
 
 .card {
-    background-color: #9ca3af; /* Cinza do card */
+    background-color: #9ca3af; /* Cinza padrão */
     border-radius: 12px;
     padding: 20px;
     text-align: center;
@@ -200,13 +197,13 @@ body {
 
 .card:hover {
     transform: translateY(-5px);
-    background-color: #cbd5e1;
+    background-color: #cbd5e1; /* Cinza mais claro */
 }
 
 .card-image {
     width: 130px;
     height: 130px;
-    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2)); /* Destaque pro sprite */
 }
 
 .card-title {
@@ -217,25 +214,26 @@ body {
     font-weight: 700;
 }
 
+/* Overlay dos cards de regiões */
 .card-overlay {
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); 
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     padding: 20px;
     box-sizing: border-box;
 }
 
 /* --- RODAPÉ (FOOTER) --- */
 .footer {
-    background-color: #1f2937;
-    color: #9ca3af;
+    background-color: #1f2937; /* Fundo escuro */
+    color: #9ca3af; /* Cinza do texto */
     padding: 40px 20px;
     text-align: center;
-    margin-top: 60px; /* Empurra para baixo */
-    border-top: 4px solid #facc15; /* Detalhe amarelo no topo */
+    margin-top: 60px;
+    border-top: 4px solid #facc15; /* Faixa amarela Pokémon */
 }
 
 .footer-content {
@@ -271,5 +269,5 @@ body {
 
 .copyright {
     font-size: 0.8rem;
-    opacity: 0.7;
+    opacity: 0.7; /* Fica mais apagado */
 }
